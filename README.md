@@ -14,3 +14,14 @@ ActiveVinyl provides Object Relational Mapping (ORM), which is used to convert d
 - `has_many` : similar to belongs_to (except like ActiveRecord, goes the other way.)
 - `has_one_through` : combines two `belongs_to` associations to make a join query using the options of `table_name`, `foreign_key`, and `primary_key`. These values are stored in `assoc_options`. This method then fetches the associated object.
     + takes in three arguments: `association name`, `the third model name`, and `source model name`.
+
+## How to Use
+---
+Clone this git repo, and require `sql_object` like:
+
+`require_relative "./lib/sq_object"
+
+class MODEL_NAME > SQLObject
+  #code here
+end
+`
