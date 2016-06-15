@@ -19,9 +19,10 @@ ActiveVinyl provides Object Relational Mapping (ORM), which is used to convert d
 ---
 Clone this git repo, and require `sql_object` like:
 
-`require_relative "./lib/sq_object"
+```ruby
+require_relative "./lib/sq_object"
 
 class MODEL_NAME > SQLObject
   #code here
 end
-`
+```
