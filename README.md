@@ -1,6 +1,6 @@
 # ActiveVinyl
 ---
-ActiveVinyl is a 'clone' of ActiveRecord, a Ruby library that provides Object Relational Mapping (ORM), which is used to convert data between incompatiable types. In this repo, ActiveVinyl will be using a .sql file and converting it to a ruby object. This clone was created to further my understanding of ActiveRecord, and some of its seemingly magical properties.
+ActiveVinyl provides Object Relational Mapping (ORM), which is used to convert data between incompatiable types. In this repo, ActiveVinyl will be using a .sql file and converting it to a ruby object.
 
 ## What does ActiveVinyl Do?
 ---

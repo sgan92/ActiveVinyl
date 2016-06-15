@@ -1,5 +1,10 @@
 require 'sqlite3'
 
+PRINT_QUERIES = ENV['PRINT_QUERIES'] == 'true'
+ROOT_FOLDER = File.join(File.dirname(__FILE__), '..')
+EXAMPLE_SQL_FILE = File.join(ROOT_FOLDER, 'example.sql')
+EXAMPLE_DB_FILE = File.join(ROOT_FOLDER, 'example.db')
+
 class DBConnection
   def self.open(db_file_name)
     @db = SQLite3::Database.new(db_file_name)
@@ -7,6 +12,16 @@ class DBConnection
     @db.type_translation = true
 
     @db
+  end
+
+  def self.reset
+    commands = [
+      "rm '#{EXAMPLE_DB_FILE}'",
+      "cat '#{EXAMPLE_SQL_FILE}' | sqlite3 '#{EXAMPLE_DB_FILE}'"
+    ]
+
+    commands.each { |command| `#{command}` }
+    DBConnection.open(EXAMPLE_DB_FILE)
   end
 
   def self.instance
