@@ -1,3 +1,5 @@
+require_relative "searchable"
+
 module Associatable
 
   def belongs_to(name, options = {})
@@ -14,7 +16,6 @@ module Associatable
   def has_many(name, options = {})
     options = HasManyOptions.new(name, self.name, options)
     define_method(name) do
-      debugger
       search_params = {}
       search_params[options.foreign_key] = self.send(options.primary_key)
       options.model_class.where(search_params)

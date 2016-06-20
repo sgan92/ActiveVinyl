@@ -1,4 +1,5 @@
 require_relative 'db_connection'
+require_relative 'associatable'
 require 'active_support/inflector'
 
 class SQLObject
@@ -62,6 +63,7 @@ class SQLObject
        #{table_name}.id = ?
    SQL
 
+   puts results
    parse_all(results).first
   end
 

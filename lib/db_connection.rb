@@ -50,4 +50,15 @@ class DBConnection
    self.open(db_file_name)
   end
 
+  def self.print_query(query, *interpolation_args)
+    return unless PRINT_QUERIES
+
+    puts '--------------------'
+    puts query
+    unless interpolation_args.empty?
+      puts "interpolate: #{interpolation_args.inspect}"
+    end
+    puts '--------------------'
+  end
+
 end
