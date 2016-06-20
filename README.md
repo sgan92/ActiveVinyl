@@ -93,10 +93,10 @@ end
 ```
 
 ```bash
-[6] pry(main)> Character.all.first.show
+[7] pry(main)> Character.all.first.show
   => #<Show:0x007fc9b1118ff0 @attributes={:id=>4, :name=>"Breaking Bad", :showType_id=>1}>
 
-[7] pry(main)> Show.all.first.characters
+[8] pry(main)> Show.all.first.characters
   => [
   #<Character:0x007fa4ec1b0ba0 @attributes={:id=>3, :name=>"Sarah Manning", :show_id=>1}>,
    #<Character:0x007fa4ec1b0920 @attributes={:id=>4, :name=>"Alison Hendrix", :show_id=>1}>
