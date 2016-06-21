@@ -24,7 +24,7 @@ Once that's done, you can either make your own model accordingly and require `sq
 ```ruby
 #model.rb
 
-require_relative "./lib/sql_object"
+require_relative "../lib/sql_object"
 require_relative '../lib/assoc_options'
 
 class Character > SQLObject
