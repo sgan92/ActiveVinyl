@@ -19,12 +19,13 @@ ActiveVinyl provides Object Relational Mapping (ORM), which is used to convert d
 ---
 Clone this git repo. A .sql file has been made available, but feel free to use your own. Simply replace the paths in `lib/db_connection.rb`.
 
-Once that's done, you can either make your own model accordingly and require `sql_object`:
+Once that's done, you can either make your own model accordingly and require `sql_object` as well as `assoc_options`:
 
 ```ruby
 #model.rb
 
-require_relative "./lib/sq_object"
+require_relative "./lib/sql_object"
+require_relative '../lib/assoc_options'
 
 class Character > SQLObject
   finalize!
@@ -77,6 +78,7 @@ To access the association methods, you will have to create more models for the d
 ```ruby
 # model.rb
 require_relative '../lib/sql_object'
+require_relative '../lib/assoc_options'
 
 class Character < SQLObject
   finalize!
