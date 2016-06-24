@@ -40,23 +40,23 @@ Afterwards, go into your console, and using irb/pry, you can then load the file 
   => true
 [2] pry(main)> Character.all
   => [#<Character:0x007fdf09b14780
-  @attributes={:id=>1, :name=>"Walter White", :tv_id=>4}>,
+  @attributes={:id=>1, :name=>"Walter White", :show_id=>4}>,
  #<Character:0x007fdf09b145f0
-  @attributes={:id=>2, :name=>"Jesse Pinkman", :tv_id=>4}>,
+  @attributes={:id=>2, :name=>"Jesse Pinkman", :show_id=>4}>,
  #<Character:0x007fdf09b144b0
-  @attributes={:id=>3, :name=>"Sarah Manning", :tv_id=>1}>,
+  @attributes={:id=>3, :name=>"Sarah Manning", :show_id=>1}>,
  #<Character:0x007fdf09b14370
-  @attributes={:id=>4, :name=>"Alison Hendrix", :tv_id=>1}>,
+  @attributes={:id=>4, :name=>"Alison Hendrix", :show_id=>1}>,
  #<Character:0x007fdf09b14230
-  @attributes={:id=>5, :name=>"Chandler Bing", :tv_id=>3}>,
+  @attributes={:id=>5, :name=>"Chandler Bing", :show_id=>3}>,
  #<Character:0x007fdf09b140f0
-  @attributes={:id=>6, :name=>"Phoebe Buffay", :tv_id=>3}>,
+  @attributes={:id=>6, :name=>"Phoebe Buffay", :show_id=>3}>,
  #<Character:0x007fdf09b0ff50
-  @attributes={:id=>7, :name=>"Barney Stinson", :tv_id=>2}>]
+  @attributes={:id=>7, :name=>"Barney Stinson", :show_id=>2}>]
 
 [3] pry(main)> Character.find(2)
-  {"id"=>2, "name"=>"Jesse Pinkman", "tv_id"=>4}
-  => #<Character:0x007fdf09b14870 @attributes={:id=>2, :name=>"Jesse Pinkman", :tv_id=>4}>
+  {"id"=>2, "name"=>"Jesse Pinkman", "show_id"=>4}
+  => #<Character:0x007fdf09b14870 @attributes={:id=>2, :name=>"Jesse Pinkman", show_id=>4}>
 
 [4] pry(main)> Character.all.first.attributes
   => {:id=>1, :name=>"Walter White", :show_id=>4}
